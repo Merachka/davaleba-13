@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Button Counter</title>
+</head>
+<body>
+	<button onclick="count()">Click me!</button>
+	<p>Counter: <span id="counter">0</span></p>
+
+	<script>
+		let countValue = 0;
+		let countingUp = true;
+
+		function count() {
+			if (countingUp) {
+				countValue++;
+				if (countValue == 10) {
+					countingUp = false;
+				}
+			} else {
+				countValue--;
+				if (countValue == 0) {
+					countingUp = true;
+				}
+			}
+
+			document.getElementById("counter").innerHTML = countValue;
+		}
+	</script>
+</body>
+</html>
+
+</body>
+</html>
